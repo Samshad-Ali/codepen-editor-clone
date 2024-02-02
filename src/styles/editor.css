@@ -1,0 +1,11 @@
+.CodeMirror{
+    height: 40vh !important;
+    color: white;
+}
+.CodeMirror-gutters{
+    background: #1f2937 !important;
+    border: 0px;
+}
+.CodeMirror-scroll{
+    background:#1f2937 !important ;
+}

@@ -5,7 +5,7 @@ import { FaCloud } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <div className=" h-[10vh] w-full flex justify-between items-center bg-black text-white p-4">
+    <div className=" h-[10vh] w-full flex justify-between items-center bg-black border-b-4 border-gray-800 text-white p-4">
       <div className="flex items-center gap-4">
         <FaCodepen className="text-4xl" />
         <h1 className="font-bold tracking-wide text-xl">Codepen Clone</h1>

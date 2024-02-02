@@ -2,8 +2,11 @@ import React from 'react'
 import Editor from './Editor'
 
 const EditorWrapper = () => {
+  const hanldeChange=()=>{
+    
+  }
   return (
-    <div className='h-[45vh] w-full flex bg-black'>
+    <div className='h-[45vh] w-full flex gap-4 bg-black'>
         <Editor
         icon='/'
         title='HTML'

@@ -4,13 +4,11 @@ import Result from './components/Result.jsx';
 import ContextWrapper from './context/ContextWrapper.js';
 function App() {
   return (
-  <>
   <ContextWrapper>
   <Header/>
   <EditorWrapper/>
   <Result/>
   </ContextWrapper>
-  </>
   );
 }
 
