@@ -11,11 +11,11 @@ const Header = () => {
         <h1 className="font-bold tracking-wide text-xl">Codepen Clone</h1>
       </div>
       <div className="flex gap-4">
-        <button className="flex gap-2 p-4 rounded-md items-center text-xl bg-gray-700 hover:bg-gray-600">
+        <button className="flex gap-2 p-2 px-4 rounded-md items-center text-xl bg-gray-700 hover:bg-gray-600">
           <FaCloud className="text-3xl" />
           Save
         </button>
-        <button className="flex gap-2 p-4 rounded-md items-center text-xl bg-gray-700 hover:bg-gray-600">
+        <button className="flex gap-2 p-2 px-4 rounded-md items-center text-xl bg-gray-700 hover:bg-gray-600">
           <IoIosSettings className="text-3xl" />
           Settings
         </button>

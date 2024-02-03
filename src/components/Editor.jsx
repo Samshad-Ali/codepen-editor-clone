@@ -9,16 +9,14 @@ import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/css/css';
 import '../styles/editor.css'
-const Editor = ({ icon, title }) => {
-    const {setIsToggle,isToggle} = useContext(context);
-    const handleToggleBtn=()=>{
-        setIsToggle(!isToggle)
-    }
+import useEditorCustomHook from "../hooks/useEditorCustomHook";
+const Editor = ({ icon, title,color,value,setValue}) => {
+   const {handleToggleBtn,isToggle} = useEditorCustomHook();
   return (
     <div className={`${isToggle?null:'flex-grow-0'} flex-grow box-border flex flex-col h-full bg-gray-800`}>
       <div className="h-[5vh] flex items-center justify-between bg-black">
-        <p className="flex gap-2 items-center text-white font-semibold bg-gray-800 p-3">
-          <span className="rounded-md text-xl bg-yellow-300 grid place-items-center text-black h-7 w-7">
+        <p className="flex gap-2 items-center text-white font-semibold bg-gray-800 p-1">
+          <span className={` ${color} rounded-md grid place-items-center text-black h-6 w-6`}>
             {icon}
           </span>
           {title}
@@ -31,9 +29,13 @@ const Editor = ({ icon, title }) => {
       </div>
       <ControlledEditor
       className='controlled-editor'
+      value={value}
+      onBeforeChange={(editor,data,value)=>{setValue(value)}}
       options={{
         mode: 'xml',
-        lineNumbers: true
+        lineNumbers: true,
+        lineWrapping: true,
+        lineBreakAnywhere: true, 
       }}
       />
     </div>
